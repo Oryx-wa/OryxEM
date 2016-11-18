@@ -1,0 +1,79 @@
+       <div class="comp-stack text-dark">
+         <div materialize class="row">
+		<div class="col l8 m7 s12">
+        <div style="text-align:center;"><h3>NEW GOODS RECIEPT</h3></div>
+<div class="card">
+  <div class="row">
+    <div class="input-field col s12 l3 m3 ">    
+          <input  id="first_name" type="text" class="validate">
+          <label>Purchase Order</label>
+        </div>
+        <div class="input-field col s12 l3 m3 ">
+           <input  id="first_name" type="text" class="validate">
+          <label >Purchase Order Status</label>
+         
+        </div>
+
+         
+     <div class="input-field col s12 l3 m3 ">    
+          <input  id="first_name" type="text" class="validate">
+          <label>Posting Date </label>
+        </div>
+        <div class="input-field col s12 l3 m3 ">
+           <input  id="first_name" type="text" class="validate">
+          <label >Due date</label>
+      
+        </div>
+
+</div>
+</div>
+						<div class="input-field  col  l4 m4 s6">
+
+							<button  class="wave-effect wave-light btn" type="submit"
+								name="action"><i class="material-icons">done</i></button>
+                
+							<button class="wave-effect wave-light btn btn disabled"><i class="material-icons">clear</i></button>
+
+						</div>
+						
+				
+          </div>
+       </div>
+  <div materialize class="row">
+		<div class="col l8 m7 s12">
+	<div class="card">
+					<table class="striped" id="tbl">
+						<thead>
+							<tr>
+								<th data-field="id"> S/N</th>
+
+								<th data-field="id"> Product</th>
+								<th data-field="id"> Expected Quantity</th>
+								<th data-field="name"> Delivered Quantity </th>
+
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr *ngFor='let g of goods '>
+								<td>{{g.sn}}</td>
+								<td>{{g.name}}</td>
+								<td>{{g.code}}</td>
+								<td>{{g.description}}</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+
+     <div style="text-align:left;"> <div class="input-field  col l4  m4 s6">
+
+							<button class="wave-effect wave-light btn btn "><i class="material-icons">save</i></button>
+							<button class="wave-effect wave-light btn btn disabled"><i class="material-icons">clear</i></button>
+
+						</div>
+     </div>
+		</div>
+  </div>
+       </div>
+       

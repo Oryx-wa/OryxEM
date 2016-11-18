@@ -1,0 +1,81 @@
+<nav class="nav-wrapper" materialize *ngIf="!search">
+  <div class="nav-wrapper">
+    <div class="hide-on-large-only col s12">
+      <span class="col s1">  
+      <a href="#!" materialize="sideNav"  data-activates="nav-mobile" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      </span>
+      <!--<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>-->
+      <!--<span class="col s3">         <a href="#!" class="left "><h4>{{title}}</h4></a></span>-->
+      <span class="col s2"> <a *ngIf="showSearch" (click)="displaySearch()"><i class="material-icons" >search</i></a></span>
+      <span class="col s2"> 
+          <a *ngIf="showCardorGrid" (click)="changeDisplayMode(1)">
+           <i class="material-icons">list</i>
+          </a>
+        </span>
+
+      <span class="col s2"> 
+          <a *ngIf="showCard" (click)="changeDisplayMode(0)">
+           <i class="material-icons">grid_on</i>
+          </a>
+        </span>
+      <span class="col s2"> 
+          <a *ngIf="showAdd" (click)="changeDisplayMode(5)">
+           <i class="material-icons">add</i>
+          </a>
+        </span>
+    </div>
+    <div class="hide-on-med-and-down">
+      <ul>
+        <li>	<a  routerLink='/home' routerLinkActive="active" class="waves-effect waves-light"><i class="material-icons left">home</i>Home</a></li>
+        <li><a class="dropdown-button waves-effect waves-light"  href="#!" data-activates="dropdown" data-beloworigin="true"><i class="material-icons">arrow_drop_down</i></a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+ <a href="#!" >&nbsp;{{title}}</a>
+        <li><a class="waves-effect waves-light" *ngIf="showSearch" (click)="displaySearch()"><i class="material-icons left" >search</i>Search</a></li>
+       
+        <li>
+          <a class="waves-effect waves-light" *ngIf="showCardorGrid" (click)="changeDisplayMode(1)">
+            <i class="material-icons left">list</i>List
+          </a>
+        </li>
+        <li>
+          <a class="waves-effect waves-light" *ngIf="showCard" (click)="changeDisplayMode(0)">
+            <i class="material-icons left">grid_on</i>Card
+          </a>
+        </li>
+               
+        <!--<li>
+          <a class="waves-effect waves-light" *ngIf="showAdd" (click)="changeDisplayMode(5)">
+            <i class="material-icons left">add</i>New
+          </a>
+        </li>-->
+        <li><a *ngIf="showRefresh">Refresh</a></li>
+        <!--<li><a *ngIf="showVert"><i class="material-icons">more_vert</i></a></li>-->
+      </ul>
+    </div>
+
+  </div>
+
+</nav>
+<!-- Dropdown Structure -->
+<ul id="dropdown" class="dropdown-content collection">
+
+		<li class="cart"><a  routerLink='/employee' routerLinkActive="active" class="waves-effect waves-purple"><i class="material-icons left">people</i>Employee &nbsp;</a></li>
+	<li class="cart"><a  routerLink='/expense' routerLinkActive="active" class="waves-effect waves-purple"><i class="material-icons left">description</i>Expense &nbsp;</a></li>
+<li class="cart"><a  routerLink='/workflow' routerLinkActive="active" class="waves-effect waves-purple"><i class="material-icons left">linear_scale</i>Workflow &nbsp;</a></li>
+
+</ul>
+<nav *ngIf="search">
+  <div class="nav-wrapper">
+    <form (ngSubmit)="onSearchSubmit()" #searchForm="ngForm">
+      <div class="input-field">
+        <input id="search" placeholder="Search" [(ngModel)]="searchString" type="search" name="search" #search="ngModel" (keyup)="keyup$.next($event)"
+        />
+        <label for="search"><i class="material-icons">search</i></label>
+        <i class="mdi-navigation-close material-icons" (click)="onCloseSearch()">close</i>
+      </div>
+    </form>
+  </div>
+</nav>

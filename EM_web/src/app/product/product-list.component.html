@@ -1,0 +1,27 @@
+<div class="comp-stack text-dark">
+<div>
+<div>
+  <form #OryxForm="ngForm">
+    <div class="collection">
+      <div class="collection-item avatar col l12 m12 "  *ngFor='let product of products '>
+        <div class="switch left col l2 m2" >
+          <label>           
+          <input type="checkbox" id="c_{{ i }}" checked="checked"  />
+          <span class="lever"></span>           
+          </label>
+        </div>    
+          <div (click)="edit.emit(agent.id)"  class="col l10 m10" style="display: inline-block;  border: 3px">
+      
+          <label>Name:</label><span class="title"> {{product.name}}</span><br/>
+        <label>Code:</label><span > {{product.code}}        </span>
+        <br>
+       <label>description:</label> <span > {{product.description}}        </span>
+
+     </div>
+      </div>
+     
+    </div>
+  </form>
+</div>
+</div>
+</div>

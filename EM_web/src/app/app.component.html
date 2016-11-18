@@ -1,0 +1,106 @@
+<!--<header  role="banner">
+	<div>
+		<div class="nav-menu-wrapper z-depth-1_5">
+			<div class="nav-main-wrapper">
+				<ul id="nav-mobile" class="side-nav fixed navigation hide-on-med-and-down" style="transform:translateX(0px);">
+					<li class="logo" style="background-image:url(../assets/images/icon175x175.jpg)">
+
+
+						<a href="http://oryx-wa.com/" class="brand-logo">-->
+							<!--<img src="../assets/images/logo2.png" />-->
+						<!--</a>&nbsp;
+					</li>
+
+					<li class="cart"><a  routerLink='/home' routerLinkActive="active" class="waves-effect waves-purple"><i class="material-icons">home</i><span>Home</span></a></li>-->
+					<!--<li class="divider"></li>-->
+					<!--<li class="cart"><a  routerLink='/employee' routerLinkActive="active" class="waves-effect waves-purple"><i class="material-icons">people</i><span>Employee</span></a></li>
+					<li class="cart"><a  routerLink='/expense' routerLinkActive="active" class="waves-effect waves-purple"><i class="material-icons">description</i><span>Expense</span></a></li>
+					<li class="cart"><a  routerLink='/workflow' routerLinkActive="active" class="waves-effect waves-purple"><i class="material-icons">linear_scale</i><span>Workflow</span></a></li>-->
+
+					<!--<li class="cart">
+						<a *ngIf="!token.authenticated" (click)="Login()" class=" waves-effect waves-purple"><i class="material-icons">lock_open</i> <span> Login</span></a>
+						<a *ngIf="token.authenticated" (click)="Logout()" class=" waves-effect waves-purple"><i class="material-icons">lock</i> <span> Logout</span></a>
+					</li>-->
+					<!--<li class="divider"></li>-->
+<!--
+					<li>
+						<li class="cart">
+							<ul materialize="collapsible " class="collapsible collapsible-accordion" data-collapsible="accordion" id="slide-out1">
+								<li class="">
+									<a class="collapsible-header  waves-effect waves-purple"><i class="material-icons">shopping_cart</i><span> Purchase</span></a>
+									<div class="collapsible-body">
+										<ul class="navigation">
+											<li class="divider"></li>
+											<li><a  routerLink='/purchase' routerLinkActive="active" class=" waves-effect waves-purple "><span> Purchase Order</span></a></li>
+											<li class="divider"></li>
+											<li><a  routerLink='/goods' routerLinkActive="active" class=" waves-effect waves-purple"><span> Goods Reciept P.O</span></a></li>
+											<li class="divider"></li>
+											<li><a  routerLink='/product' routerLinkActive="active" class=" waves-effect waves-purple"><span>Products</span></a></li>
+											<li class="divider"></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</li>
+							<li class="divider"></li>
+						<li class="cart">
+							<ul materialize="collapsible " class="collapsible collapsible-accordion" data-collapsible="accordion" id="slide-out1">
+								<li class="">
+									<a class="collapsible-header  waves-effect waves-purple"><i class="material-icons">settings</i><span> Settings</span></a>
+									<div class="collapsible-body">
+										<ul class="navigation">
+											<li class="divider"></li>
+											<li><a  class=" waves-effect waves-purple "><span>Expense Category</span></a></li>
+											<li class="divider"></li>
+											<li><a  class=" waves-effect waves-purple "><span>Workflow Groups</span></a></li>
+											<li class="divider"></li>
+											<li><a  class=" waves-effect waves-purple"><span> Process</span></a></li>
+											<hr>
+											<li><a  class=" waves-effect waves-purple"><span> States</span></a></li>
+											<li class="divider"></li>
+											<li><a  class=" waves-effect waves-purple"><span>Transistions</span></a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</li>
+						
+						<li class="divider"></li>
+				</ul>
+				<a materialize="collapsible" href="#" data-activates="slide-out1" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
+		</div>
+	</div>
+</header>-->
+<div layout="column" style="height:600px">
+
+  <app-app-mainbar [title]="title" [showVert]="showVert"> 
+    </app-app-mainbar>
+
+<main>
+<div class="col s12 m9 l10 ">
+<router-outlet></router-outlet>
+</div>
+</main>
+<script>
+(function($) {
+		$(function() {
+
+$('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      hover: true, // Activate on hover
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'right' // Displays dropdown with edge aligned to the left of button
+    }
+  );
+
+		}); // End Document Ready
+})(jQuery); // End of jQuery name space
+</script>
+<!--<ngrx-store-log-monitor toggleCommand="ctrl-g" positionCommand="ctrl-r"></ngrx-store-log-monitor>
+<main>
+	<div class="col s12 m9 l10 ">
+		<router-outlet></router-outlet>
+	</div>
+</main>-->
